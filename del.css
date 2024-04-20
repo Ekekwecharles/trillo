@@ -1,0 +1,23 @@
+.transittion-experiment {
+  height: 200px;
+  width: 300px;
+  background-color: green;
+  position: relative;
+}
+
+.transittion-experiment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100px;
+  background-color: red;
+  transform: scaleY(0);
+  transition: transform 2s, width 2s 1s;
+}
+
+.transittion-experiment:hover::before {
+  transform: scaleY(1);
+  width: 100%;
+}
